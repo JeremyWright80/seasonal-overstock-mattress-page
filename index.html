@@ -1,0 +1,340 @@
+<style>
+/* Shopify page-safe styles: beat .rte / .page__content without Liquid */
+.page__content.rte:has(.so-mib),
+.rte:has(.so-mib) {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.so-mib, .so-mib * { box-sizing: border-box; }
+.so-mib {
+  --linen:#f4efe6; --paper:#fbf8f3; --ink:#1c1917; --ink-soft:#3f3a36;
+  --muted:#6b645c; --forest:#2f4a3c; --forest-deep:#24382e; --taupe:#c4b8a8; --rule:#e4dcd0;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: Arimo, Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1120px;
+  overflow: hidden;
+}
+.so-mib img {
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  float: none !important;
+  display: block !important;
+  border: 0 !important;
+}
+.so-mib h1, .so-mib h2, .so-mib h3 {
+  font-family: Poppins, Georgia, serif !important;
+  font-weight: 500 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  margin: 0 0 12px !important;
+  color: var(--ink) !important;
+}
+.so-mib p {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  color: var(--ink-soft) !important;
+  margin: 0 0 14px !important;
+}
+.so-mib a { color: var(--forest); font-weight: 700; text-decoration: underline; }
+.so-mib .so-btn {
+  display: inline-block !important;
+  background: var(--forest) !important;
+  color: #f4efe6 !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 14px 22px !important;
+  border-radius: 999px !important;
+  margin: 4px 8px 4px 0 !important;
+  border: 0 !important;
+}
+.so-mib .so-btn-ghost {
+  background: transparent !important;
+  color: #f4efe6 !important;
+  border: 1px solid rgba(244,239,230,.5) !important;
+}
+.so-mib .so-btn-light {
+  background: #f4efe6 !important;
+  color: #2f4a3c !important;
+}
+.so-mib .so-kicker {
+  font-size: 12px !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: var(--forest) !important;
+  margin: 0 0 8px !important;
+}
+.so-mib .so-hero {
+  position: relative !important;
+  margin: 0 0 8px !important;
+  background: #1c1917;
+}
+.so-mib .so-hero img {
+  width: 100% !important;
+  height: 420px !important;
+  object-fit: cover !important;
+  object-position: center 42% !important;
+}
+.so-mib .so-hero-copy {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 28px 24px 32px !important;
+  background: linear-gradient(to top, rgba(28,25,23,.92), rgba(28,25,23,.35), transparent) !important;
+}
+.so-mib .so-hero h1 { color: #f4efe6 !important; font-size: clamp(28px, 4.4vw, 48px) !important; max-width: 16ch; }
+.so-mib .so-hero p, .so-mib .so-hero .so-kicker { color: rgba(244,239,230,.92) !important; }
+.so-mib .so-pad { padding: 36px 20px; }
+.so-mib .so-grid { display: grid !important; gap: 28px !important; }
+@media (min-width: 860px) {
+  .so-mib .so-grid-2 { grid-template-columns: 1.05fr .95fr !important; align-items: center !important; }
+}
+.so-mib .so-photo {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.so-mib .so-band {
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 20px;
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 720px) { .so-mib .so-band { grid-template-columns: 1fr 1fr 1fr; } }
+.so-mib .so-band strong { display: block; }
+.so-mib .so-band span { font-size: 13px; color: var(--muted); }
+.so-mib .so-reason { display: grid !important; gap: 24px !important; padding: 12px 0 28px !important; align-items: center !important; }
+@media (min-width: 860px) {
+  .so-mib .so-reason { grid-template-columns: 1fr 1fr !important; }
+  .so-mib .so-reason.so-flip > .so-photo { order: -1; }
+}
+.so-mib .so-minis { display: grid; gap: 16px; }
+@media (min-width: 860px) { .so-mib .so-minis { grid-template-columns: 1fr 1fr; } }
+.so-mib .so-mini { background: var(--paper); border-radius: 20px; padding: 22px; }
+.so-mib .so-canada { background: var(--forest); color: #f4efe6; padding: 40px 20px; }
+.so-mib .so-canada h2, .so-mib .so-canada p, .so-mib .so-canada li { color: #f4efe6 !important; }
+.so-mib .so-canada .so-kicker { color: var(--taupe) !important; }
+.so-mib .so-canada ul { list-style: none; padding: 0; margin: 12px 0 0; }
+.so-mib .so-canada li { background: rgba(36,56,46,.55); border-radius: 14px; padding: 12px 14px; margin: 0 0 8px; }
+.so-mib details { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+.so-mib summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.so-mib .so-cta { position: relative !important; }
+.so-mib .so-cta img { width: 100% !important; height: 380px !important; object-fit: cover !important; }
+.so-mib .so-cta-copy {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 24px !important;
+  background: rgba(28,25,23,.55) !important;
+}
+.so-mib .so-cta h2, .so-mib .so-cta p { color: #f4efe6 !important; }
+.so-mib .so-checks { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; }
+@media (min-width: 640px) { .so-mib .so-checks { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<div class="so-mib">
+  <div class="so-hero">
+    <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/hero-porch-delivery.jpg" alt="A compact kraft mattress-in-a-box delivered to the porch of a Canadian brick home at golden hour" width="1400" height="787">
+    <div class="so-hero-copy">
+      <p class="so-kicker">Canadian-made mattresses in a box</p>
+      <h1>Best Reasons to Buy a Mattress in a Box</h1>
+      <p>If you have been searching for the best mattress in a box, you do not need another ranked list of models. You need the reasons a boxed mattress is the smarter buy — especially when it is made in Canada.</p>
+      <p>
+        <a class="so-btn" href="https://seasonal-overstock.com/collections/mattresses">Browse Canadian-made mattresses</a>
+        <a class="so-btn so-btn-ghost" href="https://seasonal-overstock.com/pages/what-size-mattress-fits-my-bed-frame-complete-guide">Mattress size guide</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="so-pad so-grid so-grid-2">
+    <div>
+      <h2>What a mattress in a box actually is</h2>
+      <p>A mattress in a box — also called a bed-in-a-box — is a complete mattress that is compressed, rolled, and shipped in a carton you can carry. After you cut the wrap, it expands to its designed height and feel. The carton is not the product. It is how a full-size gel foam or orthopedic mattress gets up the stairs.</p>
+      <p>This page is not a comparison of competing models. It is a practical brief for Canadian homes: apartments, farmhouses, bunk rooms, and RVs included. If you are ready to choose by feel, <a href="https://seasonal-overstock.com/collections/mattresses">browse our Canadian-made boxed mattresses</a>.</p>
+      <ul class="so-checks">
+        <li>Ships compressed, sleeps full-size</li>
+        <li>Made in Canada, fulfilled in Canada</li>
+        <li>CertiPUR-US certified foams</li>
+        <li>Free shipping across Canada</li>
+      </ul>
+    </div>
+    <div class="so-photo">
+      <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/cutout-mattress-box.jpg" alt="Studio cutout of a sealed kraft cardboard mattress in a box on a warm off-white background" width="1400" height="1400">
+    </div>
+  </div>
+
+  <div class="so-band">
+    <div><strong>Free shipping in Canada</strong><span>2–7 day fulfillment from Canadian warehouses</span></div>
+    <div><strong>Canadian-made builds</strong><span>Foam, covers, and assembly closer to home</span></div>
+    <div><strong>30-day satisfaction window</strong><span>Sleep on it in your own bedroom first</span></div>
+  </div>
+
+  <div class="so-pad">
+    <p class="so-kicker">The reasons that matter</p>
+    <h2>Why a mattress in a box is often the best mattress you can buy</h2>
+
+    <div class="so-reason">
+      <div>
+        <p class="so-kicker">Reason 01</p>
+        <h3>The best mattress in a box is the one that actually fits through your door</h3>
+        <p>Traditional mattresses fail at the threshold. A queen that is 60 by 80 inches will not bend around a stair landing, will not stand in most elevators, and will not ride in a compact car. A mattress in a box will.</p>
+        <p>That is the first reason boxed beds won Canadian apartments, walk-ups, and rural homes with long driveways. One person can carry the carton to the bedroom, which is why “best mattress in a box” searches so often come from people who have already measured a hallway and lost.</p>
+      </div>
+      <div class="so-photo">
+        <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/stairs-carry.jpg" alt="One person carrying a compact mattress-in-a-box up a narrow apartment stairwell" width="1400" height="933">
+      </div>
+    </div>
+
+    <div class="so-reason so-flip">
+      <div>
+        <p class="so-kicker">Reason 02</p>
+        <h3>Compression is a shipping method — not a cheaper mattress</h3>
+        <p>The most common objection we hear is that a rolled mattress must be flimsy. It is not. The foam is manufactured at full density, then vacuum-packed so it can travel. Once the wrap is off, the core returns to the same height and support it had on the factory table.</p>
+        <p>If you want the best mattress in a box, look past the carton: gel-infused comfort layers, high-density bio-foam cores, quilted covers, and reinforced side stitching. Those details decide the sleep. The box only decides whether it arrives.</p>
+      </div>
+      <div class="so-photo">
+        <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/expanding-unbox.jpg" alt="A vacuum-compressed quilted mattress expanding from plastic wrap on a light oak bedroom floor" width="1400" height="1050">
+      </div>
+    </div>
+
+    <div class="so-reason">
+      <div>
+        <p class="so-kicker">Reason 03</p>
+        <h3>Canadian-made boxed mattresses keep production closer to the bedroom</h3>
+        <p>Many of the mattresses we sell are Canadian-made: cut, assembled, and packed in Canadian facilities, then fulfilled inside Canada. Origin is not trivia. It is lead time, labelling, and what happens when you need a size swap.</p>
+        <p>Canadian-made also means tariff-free shopping with Canadian fulfillment. Soy-based bio-foams, CertiPUR-US certified foams, and bamboo-feel or cotton-enriched covers are the construction language of the boxed mattresses we stock, not a showroom upsell.</p>
+      </div>
+      <div class="so-photo">
+        <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/canadian-factory.jpg" alt="Craftsperson inspecting gel memory foam layers in a clean Canadian mattress factory" width="1400" height="787">
+      </div>
+    </div>
+
+    <div class="so-reason so-flip">
+      <div>
+        <p class="so-kicker">Reason 04</p>
+        <h3>Setup takes minutes, not a moving crew</h3>
+        <p>Carry the box in. Open it with a blunt tool so you do not nick the foam. Roll the compressed mattress onto the foundation. Cut the inner wrap. It expands on its own. Most people are making the bed in under fifteen minutes.</p>
+        <p>Full loft usually arrives over 24 to 72 hours. You can sleep on it the first night; wait a day or two before judging firmness. Gel memory foam and quilted tops need that last bit of air.</p>
+      </div>
+      <div class="so-photo">
+        <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/foam-layers.jpg" alt="Cutaway of a gel memory foam mattress showing quilted cover, cooling gel foam, and high-density core" width="1400" height="1050">
+      </div>
+    </div>
+
+    <div class="so-minis">
+      <div class="so-mini">
+        <h3>You try it in your own room, under your own duvet</h3>
+        <p>Showroom lighting and a ten-minute lie-down are a poor test. A boxed mattress lets you judge support with your pillow, your partner, and the temperature of a Canadian bedroom in January. Seasonal Overstock backs eligible mattresses with a 30-day satisfaction window so that test is real, not theatrical.</p>
+      </div>
+      <div class="so-mini">
+        <h3>You pay for the mattress, not the showroom</h3>
+        <p>Boxed mattresses skip floor samples, commissioned floor walks, and the logistics of delivering an uncompressed queen. Those savings show up as overstock pricing on Canadian-made gel foam and orthopedic builds.</p>
+      </div>
+      <div class="so-mini">
+        <h3>Modern boxed beds are built to sleep cool and still</h3>
+        <p>Gel-infused foam, breathable quilted covers, and zoned pressure relief are standard on the Canadian-made boxed mattresses we carry. Motion isolation is a genuine strength of foam construction, which is why couples and bunk rooms both do well with a mattress in a box.</p>
+      </div>
+      <div class="so-mini">
+        <h3>Sizing is simple if you measure the frame, not the old bed</h3>
+        <p>Canada uses the same standard sizes as the United States. Double means Full. Queen is 60 by 80 inches. Before you order, measure the inside of the frame. Read our <a href="https://seasonal-overstock.com/pages/what-size-mattress-fits-my-bed-frame-complete-guide">complete mattress size guide</a> for Twin through California King, clearance, and the mix-ups that send the wrong box to the wrong room.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="so-canada so-grid so-grid-2">
+    <div>
+      <p class="so-kicker">Made in Canada</p>
+      <h2>A Canadian-made mattress in a box is a different purchase</h2>
+      <p>Shoppers who specifically want a Canadian-made mattress in a box are usually solving three problems at once: origin they can name, delivery that does not stall at the border, and foam that meets the certifications on a Canadian law label.</p>
+      <p>UltraFlex boxed mattresses in our collection include orthopedic gel memory foam, reversible medium-firm and firm builds, soy-based bio-foam cores, cooling gel, bamboo-feel covers, and options suited to bunks, trundles, and RVs. They ship compressed. They are not a different category of “lesser bed.”</p>
+      <p><a class="so-btn so-btn-light" href="https://seasonal-overstock.com/collections/mattresses">Shop the mattress collection</a></p>
+    </div>
+    <ul>
+      <li>Built and packed in Canadian facilities</li>
+      <li>Tariff-free shopping with Canadian fulfillment</li>
+      <li>CertiPUR-US certified foams on gel and bio-foam builds</li>
+      <li>Reversible and bunk/RV-friendly boxed options</li>
+      <li>Free shipping across Canada, typically 2–7 days</li>
+    </ul>
+  </div>
+
+  <div class="so-pad" id="faq">
+    <h2>Common questions about mattresses in a box</h2>
+    <p>Direct answers written so a person — or an AI assistant — can cite them without guessing.</p>
+    <details open>
+      <summary>What is a mattress in a box?</summary>
+      <p>A mattress in a box is a full-size mattress that is compressed, rolled, and sealed in a carton small enough to carry through a doorway, stairwell, or elevator. After you unbox it and remove the vacuum wrap, the foam and comfort layers expand back to their designed height. The box is packaging. The mattress itself is a complete bed, not a folding camp pad.</p>
+    </details>
+    <details>
+      <summary>Is a mattress in a box as good as a store mattress?</summary>
+      <p>Yes, when construction is equal. Compression is a shipping method, not a cheaper recipe. A Canadian-made boxed mattress with dense foam, gel comfort layers, and a proper cover sleeps the same as that mattress would if it had arrived uncompressed. Judge foam density, height, edge stitching, and certifications — not the carton.</p>
+    </details>
+    <details>
+      <summary>Why buy a Canadian-made mattress in a box?</summary>
+      <p>A Canadian-made mattress in a box is built in Canadian facilities, often with locally sourced foam and textiles, then fulfilled inside Canada. That shortens shipping, avoids border delays, and keeps the purchase tariff-free for Canadian households. You also get construction that has to meet Canadian labelling and flammability rules, with CertiPUR-US certified foams on many models.</p>
+    </details>
+    <details>
+      <summary>How long does a mattress in a box take to expand?</summary>
+      <p>Most boxed mattresses take shape within a few hours and reach full height within 24 to 72 hours. You can usually sleep on it the first night. Give gel memory foam and quilted tops a full day or two before judging firmness, because the last millimetres of loft return after the core has already opened.</p>
+    </details>
+    <details>
+      <summary>Do mattresses in a box smell?</summary>
+      <p>A light new-foam scent is normal for the first 24 to 72 hours. It is off-gassing from compressed foam returning to air, not a sign the mattress is unsafe. CertiPUR-US certified foams are made without ozone depleters, PBDEs, mercury, lead, and formaldehyde, and with low VOC emissions. Ventilate the room and the scent fades quickly.</p>
+    </details>
+    <details>
+      <summary>Does a mattress in a box need a box spring?</summary>
+      <p>Usually no. Most modern boxed mattresses are designed for a slatted platform, solid foundation, or bunk/RV deck. A box spring is optional, not required. What matters is even support: slats should not be spaced so widely that the foam dips between them. Match the mattress size to the inside of the frame before you order.</p>
+    </details>
+    <details>
+      <summary>What size mattress in a box do I need?</summary>
+      <p>Canada uses the same standard sizes as the United States: Twin/Single 38 by 75 inches, Twin XL 38 by 80, Full/Double 54 by 75, Queen 60 by 80, King 76 by 80, and California King 72 by 84. Measure the inside of the bed frame, not the old mattress. Our <a href="https://seasonal-overstock.com/pages/what-size-mattress-fits-my-bed-frame-complete-guide">complete mattress size guide</a> walks through the chart, clearance, and common mix-ups.</p>
+    </details>
+    <details>
+      <summary>Are mattresses in a box good for apartments, bunks, and RVs?</summary>
+      <p>They are often the best option in those spaces. A boxed mattress fits elevators, tight stair turns, and RV hatches that a traditional queen cannot. Reversible gel-foam models also work well on bunks and trundles because they do not need a box spring and recover after compression.</p>
+    </details>
+    <details>
+      <summary>How long does a mattress in a box last?</summary>
+      <p>A well-built boxed mattress with high-density foam should serve most sleepers for seven to ten years, the same window as a comparable showroom foam bed. Density and construction decide lifespan, not the fact it shipped rolled. Rotate it a few times in the first year and use a breathable protector to keep the cover clean.</p>
+    </details>
+    <details>
+      <summary>Can you return a mattress in a box?</summary>
+      <p>Seasonal Overstock offers a 30-day satisfaction guarantee on eligible mattresses. If the feel is not right, start a return within that window. Return shipping fees may apply; details are in our refund policy. Always expand the mattress fully and sleep on it for several nights before deciding, because first-night loft is not the finished feel.</p>
+    </details>
+    <details>
+      <summary>What is the best mattress in a box for Canadians?</summary>
+      <p>The best mattress in a box is the one that matches your sleep position, firmness preference, and frame — and that is actually made and shipped in Canada if you care about lead times and origin. We do not rank competing brand models on this page. We stock Canadian-made boxed mattresses in firm and medium-firm gel foam, orthopedic builds, and reversible options so you can choose by feel, height, and use, not by a sponsored list.</p>
+    </details>
+    <details>
+      <summary>How do you set up a mattress in a box?</summary>
+      <p>Carry the carton to the bedroom, open it with a blunt tool so you do not nick the foam, roll the compressed mattress onto the foundation, and cut the inner wrap. It will expand on its own. Smooth the cover, add a protector, and make the bed. Setup typically takes under fifteen minutes. Allow 24 to 72 hours for full loft.</p>
+    </details>
+  </div>
+
+  <div class="so-cta">
+    <img src="https://cdn.jsdelivr.net/gh/JeremyWright80/seasonal-overstock-mattress-page@main/images/sleep-couple.jpg" alt="Couple sleeping at dawn on a quilted gel memory foam mattress in a calm Canadian bedroom" width="1400" height="787">
+    <div class="so-cta-copy">
+      <div>
+        <h2>Ready to choose by feel, not by a ranking?</h2>
+        <p>Browse Canadian-made mattresses in a box — gel foam, orthopedic, reversible, and bunk-ready — then confirm the size against your frame.</p>
+        <p>
+          <a class="so-btn so-btn-light" href="https://seasonal-overstock.com/collections/mattresses">Shop mattresses in a box</a>
+          <a class="so-btn so-btn-ghost" href="https://seasonal-overstock.com/pages/what-size-mattress-fits-my-bed-frame-complete-guide">Check your mattress size</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
